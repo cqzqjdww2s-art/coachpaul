@@ -1,0 +1,321 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<title>Blog · kennis over training, voeding &amp; herstel | coachpaul</title>
+<meta name="description" content="De kennisbank van coachpaul: onderbouwde artikelen over afvallen, spieropbouw, voeding en herstel. Gebaseerd op onderzoek, vertaald naar de praktijk, nieuwe artikelen elke week.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="nl_NL">
+<meta property="og:title" content="Blog · training, voeding &amp; herstel | coachpaul">
+<meta property="og:description" content="Onderbouwde artikelen over afvallen, spieropbouw, voeding en herstel.">
+<meta name="theme-color" content="#F5F0E4">
+<link rel="canonical" href="https://coachpaul.nl/blog.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap">
+
+<style>
+/* Editorial content-hub op crème: vet script-logo, brede zoekbalk-pil en hamburger
+   in de kop; intro-rij met beelden in organische vormen en gekleurde badge-stippen;
+   gigantische serif-regel over de volle breedte; groot twee-koloms beeldraster met
+   middenlijn. Dunne inktlijnen, verder monochroom. Eén licht thema. */
+:root{
+  --paper:#F5F0E4; --ink:#1E1A15; --ink2:#6E675C; --mute:#9A9185;
+  --line:#E3DBCA; --card:#FBF7EE; --oak:#A87F4F;
+  --b-geel:#E5C33C; --b-roze:#E0787E; --b-blauw:#7FA4C4; --b-olijf:#96A05F; --b-terra:#C37A54; --b-paars:#9C8FC0;
+  --serif:"Instrument Serif",Georgia,"Times New Roman",serif;
+  --sans:"Archivo","Helvetica Neue",Arial,sans-serif;
+  --pad:clamp(18px,4vw,44px); --w:1360px;
+}
+@media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
+*,*::before,*::after{box-sizing:border-box}
+html{padding-block:env(safe-area-inset-top,0px) env(safe-area-inset-bottom,0px)}
+body{margin:0;background:var(--paper);color:var(--ink);
+  font:400 clamp(15.5px,.3vw + 14.5px,17px)/1.6 var(--sans);
+  -webkit-font-smoothing:antialiased;overflow-x:hidden}
+body::before{content:"";position:fixed;inset:0 0 auto;z-index:20;height:env(safe-area-inset-top,0px);background:var(--paper)}
+.wrap{max-width:var(--w);margin-inline:auto;
+  padding-left:max(var(--pad),env(safe-area-inset-left,0px));
+  padding-right:max(var(--pad),env(safe-area-inset-right,0px))}
+img{max-width:100%;display:block}
+h1,h2,h3{margin:0;text-wrap:balance}
+p{margin:0}
+a{color:inherit}
+a:focus-visible,input:focus-visible,button:focus-visible{outline:2px solid var(--ink);outline-offset:3px}
+
+/* kop: script-logo · zoekbalk · hamburger */
+header.mast .wrap{display:flex;align-items:center;gap:clamp(1.1rem,3.5vw,3rem);padding-block:1.05rem}
+.logo{font:400 clamp(1.55rem,3.2vw,1.9rem)/1.1 var(--serif);letter-spacing:0;text-decoration:none;white-space:nowrap}
+.logo .tld{color:var(--oak)}
+.searchpill{flex:1;display:flex;align-items:center;gap:.85rem;min-width:0;
+  border:1.5px solid var(--ink);border-radius:999px;background:var(--paper);
+  padding:.85rem 1.35rem}
+.searchpill svg{flex:none;opacity:.85}
+.searchpill input{all:unset;flex:1;min-width:0;font:italic 400 clamp(1rem,1.6vw,1.2rem)/1.2 var(--serif);color:var(--ink)}
+.searchpill input::placeholder{color:var(--ink);opacity:.85}
+.searchpill .arr{margin-left:auto;font-size:1.2rem;line-height:1}
+.burger{flex:none;display:grid;gap:5px;background:none;border:0;cursor:pointer;padding:.6rem .2rem}
+.burger i{display:block;width:26px;height:2px;background:var(--ink);border-radius:2px;transition:transform .25s ease,opacity .25s ease}
+.burger[aria-expanded="true"] i:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.burger[aria-expanded="true"] i:nth-child(2){opacity:0}
+.burger[aria-expanded="true"] i:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+@media (max-width:619px){.searchpill{display:none}}
+.menu{display:none;border-top:1px solid var(--ink)}
+.menu.open{display:block}
+.menu .wrap{display:grid;padding-block:.4rem}
+.menu a{display:flex;align-items:baseline;justify-content:space-between;gap:1rem;
+  padding:1rem 0;text-decoration:none;border-bottom:1px solid var(--line);
+  font:400 clamp(1.5rem,3.4vw,2.2rem)/1.1 var(--serif)}
+.menu a:last-child{border-bottom:0}
+.menu a small{font:600 .62rem/1 var(--sans);letter-spacing:.28em;text-transform:uppercase;color:var(--mute)}
+.menu a:hover{color:var(--oak)}
+
+.rule{border:0;border-top:1px solid var(--ink);margin:0}
+
+/* intro-rij: tekst links, drie beelden in organische vormen rechts */
+.shelfband{border-bottom:1px solid var(--ink)}
+.shelfband .wrap{display:grid;gap:clamp(1.8rem,4vw,3rem);padding-block:clamp(2rem,4.5vw,3.4rem)}
+@media (min-width:900px){.shelfband .wrap{grid-template-columns:minmax(230px,.75fr) 2.25fr;align-items:center}}
+.shelf-copy{display:grid;gap:.9rem;max-width:34ch}
+.shelf-copy h1{font:600 clamp(1.1rem,1.9vw,1.35rem)/1.45 var(--sans);letter-spacing:-.01em}
+.shelf-copy p{color:var(--ink2);font-size:.96rem;line-height:1.65}
+.shelf{display:grid;gap:clamp(1.3rem,3vw,2.4rem)}
+@media (min-width:640px){.shelf{grid-template-columns:repeat(3,1fr)}}
+.item{display:grid;gap:.75rem;text-decoration:none;min-width:0;align-content:start}
+.item-img{overflow:hidden;background:var(--line);aspect-ratio:1/1;position:relative}
+.item:nth-child(1) .item-img{border-radius:30px}
+.item:nth-child(2) .item-img{border-radius:999px;aspect-ratio:1.15/1}
+.item:nth-child(3) .item-img{border-radius:999px 999px 30px 30px}
+.item-img img{width:100%;height:100%;object-fit:cover;filter:saturate(.95) sepia(.04);
+  transition:transform .55s cubic-bezier(.2,.6,.2,1)}
+.item:hover .item-img img{transform:scale(1.045)}
+.item-row{display:flex;align-items:center;justify-content:space-between;gap:.8rem}
+.item-row b{font:600 clamp(1.15rem,2vw,1.4rem)/1.2 var(--sans);letter-spacing:-.015em;min-width:0}
+.badges{display:flex;gap:.4rem;flex:none}
+.badges i{width:30px;height:30px;border-radius:50%;background:var(--bc,var(--ink));
+  display:grid;place-content:center;color:#fff;font:700 .72rem/1 var(--sans);font-style:normal}
+.item small{font:500 .86rem/1.5 var(--sans);color:var(--ink2)}
+.item:hover .item-row b{color:var(--oak)}
+
+/* gigantische serif-regel over de volle breedte */
+.giant{border-bottom:1px solid var(--ink);overflow:hidden}
+.giant-track{display:inline-flex;white-space:nowrap;align-items:baseline;
+  animation:slide 38s linear infinite;padding-block:clamp(1rem,2.2vw,1.7rem)}
+.giant-track span{font:400 clamp(3rem,8.6vw,7rem)/1.08 var(--serif);letter-spacing:-.01em;padding-right:5rem}
+.giant-track em{font-style:italic}
+@keyframes slide{to{transform:translateX(-50%)}}
+@media (prefers-reduced-motion:reduce){
+  .giant-track{animation:none}
+}
+
+/* groot twee-koloms raster met middenlijn */
+.features{display:grid}
+@media (min-width:860px){.features{grid-template-columns:1fr 1fr}
+  .feature:nth-child(even){border-left:1px solid var(--ink)}
+  .feature:nth-child(n+3){border-top:1px solid var(--ink)}}
+@media (max-width:859px){.feature + .feature{border-top:1px solid var(--ink)}}
+.feature{display:grid;gap:1.1rem;align-content:start;text-decoration:none;min-width:0;
+  padding:clamp(1.8rem,4vw,3rem) clamp(1.2rem,3vw,2.6rem)}
+.f-img{overflow:hidden;background:var(--line);aspect-ratio:4/3;border-radius:4px}
+.f-img img{width:100%;height:100%;object-fit:cover;filter:saturate(.95) sepia(.04);
+  transition:transform .55s cubic-bezier(.2,.6,.2,1)}
+.feature:hover .f-img img{transform:scale(1.035)}
+.f-meta{display:flex;align-items:center;gap:.6rem;
+  font:600 .64rem/1.6 var(--sans);letter-spacing:.26em;text-transform:uppercase;color:var(--mute)}
+.f-meta i{width:9px;height:9px;border-radius:50%;background:var(--bc,var(--oak));flex:none;font-style:normal}
+.feature h2{font:400 clamp(1.7rem,3.2vw,2.5rem)/1.12 var(--serif);letter-spacing:-.01em}
+.feature h2 em{font-style:italic;color:var(--oak)}
+.feature p{color:var(--ink2);font-size:.96rem;line-height:1.62;max-width:52ch}
+.lees{font:600 .68rem/1 var(--sans);letter-spacing:.24em;text-transform:uppercase;color:var(--ink);
+  border-bottom:1px solid var(--oak);padding-bottom:.45em;width:max-content}
+.feature:hover .lees{color:var(--oak)}
+
+/* afsluitband */
+.band{border-top:1px solid var(--ink)}
+.band .wrap{display:flex;align-items:center;justify-content:space-between;gap:1.4rem;flex-wrap:wrap;
+  padding-block:clamp(2rem,4.5vw,3.2rem)}
+.band p{font:400 clamp(1.6rem,3.4vw,2.5rem)/1.25 var(--serif);max-width:24ch}
+.band em{font-style:italic;color:var(--oak)}
+.band-links{display:flex;gap:1rem 1.6rem;flex-wrap:wrap;align-items:center}
+.pill{display:inline-flex;align-items:center;gap:.6rem;border-radius:999px;
+  background:var(--ink);color:var(--paper);border:1.5px solid var(--ink);
+  font:600 .72rem/1 var(--sans);letter-spacing:.18em;text-transform:uppercase;
+  padding:1em 1.7em;text-decoration:none;transition:background .25s ease,color .25s ease,border-color .25s ease}
+.pill:hover{background:var(--oak);border-color:var(--oak);color:#fff}
+.ghostlink{font:600 .7rem/1 var(--sans);letter-spacing:.24em;text-transform:uppercase;color:var(--ink);
+  text-decoration:none;border-bottom:1px solid var(--oak);padding-bottom:.45em}
+.ghostlink:hover{color:var(--oak)}
+
+footer{border-top:1px solid var(--ink)}
+footer .wrap{display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap;padding-block:1.3rem}
+.foot-logo{font:400 1.4rem/1 var(--serif);text-decoration:none}
+.foot-logo .tld{color:var(--oak)}
+footer small{font:600 .66rem/1.8 var(--sans);letter-spacing:.18em;text-transform:uppercase;color:var(--ink2)}
+footer small a{text-decoration:none}
+footer small a:hover{color:var(--oak)}
+
+@media (prefers-reduced-motion:reduce){
+  .item-img img,.f-img img,.pill,.burger i{transition:none}
+}
+</style>
+</head>
+<body>
+
+<header class="mast">
+  <div class="wrap">
+    <a class="logo" href="./">coachpaul<span class="tld">.nl</span></a>
+    <label class="searchpill">
+      <svg width="19" height="19" viewBox="0 0 18 18" fill="none" aria-hidden="true"><circle cx="7.5" cy="7.5" r="5.5" stroke="#1E1A15" stroke-width="1.8"/><path d="M12 12l4.5 4.5" stroke="#1E1A15" stroke-width="1.8" stroke-linecap="round"/></svg>
+      <input id="zoek" type="search" placeholder="Klein beginnen. Zoek hier." aria-label="Zoek een artikel">
+      <span class="arr" aria-hidden="true">→</span>
+    </label>
+    <button class="burger" id="burger" type="button" aria-expanded="false" aria-controls="menu" aria-label="Menu">
+      <i></i><i></i><i></i>
+    </button>
+  </div>
+  <nav class="menu" id="menu" aria-label="Hoofdmenu">
+    <div class="wrap">
+      <a href="./">Home <small>De coaching</small></a>
+      <a href="blog.html">Blog <small>Je bent hier</small></a>
+      <a href="recepten.html">Recepten <small>Eiwitrijk &amp; snel</small></a>
+      <a href="./#start">Plan een gratis intake <small>Via Instagram</small></a>
+    </div>
+  </nav>
+</header>
+
+<hr class="rule">
+
+<main>
+  <!-- intro-rij met drie beelden in organische vormen -->
+  <section class="shelfband" aria-label="Uitgelicht">
+    <div class="wrap">
+      <div class="shelf-copy">
+        <h1>Het tegengif voor fitnessmythes</h1>
+        <p>Van supplement-hypes tot crashdiëten: fit worden is al moeilijk genoeg zonder ruis. Hier lees je wat de wetenschap zegt, vertaald naar wat jij morgen kunt doen.</p>
+        <p>Nieuwe artikelen elke week, geschreven door je coach.</p>
+      </div>
+      <div class="shelf" id="shelf">
+        <a class="item" href="blog/hoeveel-eiwit-per-dag.html" data-zoek="eiwit voeding proteine spieropbouw shake">
+          <span class="item-img"><img src="img/blog/hummus.jpg" alt="" width="1600" height="1066" loading="lazy" decoding="async"></span>
+          <span class="item-row"><b>Eiwit</b><span class="badges"><i style="--bc:var(--b-geel)">V</i><i style="--bc:var(--b-olijf)">✓</i></span></span>
+          <small>Hoeveel heb je écht nodig per dag?</small>
+        </a>
+        <a class="item" href="blog/afvallen-zonder-jojo.html" data-zoek="afvallen jojo calorietekort cutten vet dieet">
+          <span class="item-img"><img src="img/blog/meetlint.jpg" alt="" width="1200" height="1800" loading="lazy" decoding="async" style="object-position:50% 35%"></span>
+          <span class="item-row"><b>Afvallen</b><span class="badges"><i style="--bc:var(--b-blauw)">A</i><i style="--bc:var(--b-roze)">♥</i></span></span>
+          <small>Zonder jojo-effect, blijvend resultaat</small>
+        </a>
+        <a class="item" href="blog/spieropbouw-beginners.html" data-zoek="spieropbouw beginners krachttraining schema fullbody">
+          <span class="item-img"><img src="img/blog/spieropbouw.jpg" alt="Krachttraining met weerstandsbanden" width="1200" height="1800" loading="lazy" decoding="async" style="object-position:50% 25%"></span>
+          <span class="item-row"><b>Spieropbouw</b><span class="badges"><i style="--bc:var(--b-terra)">T</i><i style="--bc:var(--b-paars)">★</i></span></span>
+          <small>Het startplan voor beginners</small>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- gigantische serif-regel -->
+  <div class="giant" aria-hidden="true">
+    <div class="giant-track">
+      <span>Klein beginnen. <em>Groot volhouden.</em> · Minder mythes. <em>Meer resultaat.</em> ·&nbsp;</span>
+      <span>Klein beginnen. <em>Groot volhouden.</em> · Minder mythes. <em>Meer resultaat.</em> ·&nbsp;</span>
+    </div>
+  </div>
+
+  <!-- groot twee-koloms raster -->
+  <section class="features" id="grid" aria-label="Alle artikelen">
+    <a class="feature" href="blog/hoeveel-eiwit-per-dag.html" style="--bc:var(--b-geel)" data-zoek="eiwit voeding proteine spieropbouw shake">
+      <span class="f-img"><img src="img/blog/fruit.jpg" alt="" width="1600" height="1067" loading="lazy" decoding="async"></span>
+      <span class="f-meta"><i></i>Voeding · 01.11.26 · 5 min</span>
+      <h2>Hoeveel eiwit heb je <em>écht</em> nodig per dag?</h2>
+      <p>1,6 tot 2,2 gram per kilo lichaamsgewicht, maar wat betekent dat op je bord? De wetenschap achter eiwitten, zonder verkooppraatjes.</p>
+      <span class="lees">Lees het artikel</span>
+    </a>
+    <a class="feature" href="blog/afvallen-zonder-jojo.html" style="--bc:var(--b-blauw)" data-zoek="afvallen jojo calorietekort cutten vet dieet">
+      <span class="f-img"><img src="img/blog/jeans.jpg" alt="" width="1200" height="1800" loading="lazy" decoding="async" style="object-position:50% 30%"></span>
+      <span class="f-meta"><i></i>Afvallen · 28.10.26 · 5 min</span>
+      <h2>Afvallen zonder <em>jojo-effect</em></h2>
+      <p>Waarom crashdiëten altijd terugslaan, en hoe je met een klein tekort, genoeg eiwit en krachttraining vet verliest en het eraf hóudt.</p>
+      <span class="lees">Lees het artikel</span>
+    </a>
+    <a class="feature" href="blog/spieropbouw-beginners.html" style="--bc:var(--b-terra)" data-zoek="spieropbouw beginners krachttraining schema fullbody">
+      <span class="f-img"><img src="img/blog/spieropbouw.jpg" alt="Krachttraining met weerstandsbanden" width="1200" height="1800" loading="lazy" decoding="async" style="object-position:50% 30%"></span>
+      <span class="f-meta"><i></i>Training · 24.10.26 · 6 min</span>
+      <h2>Spieropbouw voor <em>beginners</em></h2>
+      <p>Progressieve overload, de juiste frequentie en realistische verwachtingen: wat écht werkt als je net begint met krachttraining.</p>
+      <span class="lees">Lees het artikel</span>
+    </a>
+    <a class="feature" href="recovery.html" style="--bc:var(--b-olijf)" data-zoek="recovery herstel sauna ijsbad infrarood roodlicht">
+      <span class="f-img"><img src="img/sauna.jpg" alt="" width="1600" height="844" loading="lazy" decoding="async"></span>
+      <span class="f-meta"><i></i>Herstel · De gids</span>
+      <h2>De recovery-gids: warmte, kou <em>&amp; licht</em></h2>
+      <p>Sauna, ijsbad, infrarood en roodlicht: wat ze doen, wat de wetenschap erover zegt en hoe je ze slim inzet naast je training.</p>
+      <span class="lees">Open de gids</span>
+    </a>
+  </section>
+
+  <!-- afsluitband -->
+  <div class="band">
+    <div class="wrap">
+      <p>Honger gekregen? Of liever een plan <em>op maat?</em></p>
+      <div class="band-links">
+        <a class="ghostlink" href="recepten.html">Bekijk de recepten</a>
+        <a class="pill" href="./#start">Plan een gratis intake</a>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <a class="foot-logo" href="./">coachpaul<span class="tld">.nl</span></a>
+    <small>© 2026 · training · voeding · recovery</small>
+    <small><a href="./">Home</a> &nbsp;·&nbsp; <a href="recepten.html">Recepten</a> &nbsp;·&nbsp; <a href="recovery.html">Recovery</a> &nbsp;·&nbsp; <a href="https://www.instagram.com/klouwenspaul" rel="noopener">Instagram</a></small>
+  </div>
+</footer>
+
+<script>
+(function(){
+  /* hamburger-menu */
+  var burger = document.getElementById('burger');
+  var menu = document.getElementById('menu');
+  if (burger && menu) {
+    burger.addEventListener('click', function(){
+      var open = menu.classList.toggle('open');
+      burger.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+  }
+  /* zoekfilter */
+  var input = document.getElementById('zoek');
+  var cards = [].slice.call(document.querySelectorAll('#grid .feature, #shelf .item'));
+  if (input) {
+    input.addEventListener('input', function(){
+      var q = input.value.trim().toLowerCase();
+      cards.forEach(function(c){
+        var hay = (c.textContent + ' ' + (c.dataset.zoek || '')).toLowerCase();
+        c.style.display = !q || hay.indexOf(q) !== -1 ? '' : 'none';
+      });
+    });
+  }
+})();
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Blog",
+  "name": "coachpaul Blog",
+  "description": "Onderbouwde artikelen over afvallen, spieropbouw, voeding en herstel.",
+  "inLanguage": "nl-NL",
+  "author": {"@type": "Person", "name": "Paul Klouwens"},
+  "blogPost": [
+    {"@type": "BlogPosting", "headline": "Hoeveel eiwit heb je écht nodig per dag?", "url": "blog/hoeveel-eiwit-per-dag.html", "datePublished": "2026-11-01"},
+    {"@type": "BlogPosting", "headline": "Afvallen zonder jojo-effect", "url": "blog/afvallen-zonder-jojo.html", "datePublished": "2026-10-28"},
+    {"@type": "BlogPosting", "headline": "Spieropbouw voor beginners", "url": "blog/spieropbouw-beginners.html", "datePublished": "2026-10-24"}
+  ]
+}
+</script>
+</body>
+</html>

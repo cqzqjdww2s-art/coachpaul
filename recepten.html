@@ -1,0 +1,443 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<title>Eiwitrijke recepten · snel &amp; op maat | coachpaul</title>
+<meta name="description" content="Eiwitrijke recepten voor afvallen en spieropbouw: snel klaar, gewone supermarkt-ingrediënten en per recept de calorieën en eiwitten. Van kwarkbowl tot teriyaki-mealprep.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="nl_NL">
+<meta property="og:title" content="Eiwitrijke recepten | coachpaul">
+<meta property="og:description" content="Snelle, eiwitrijke recepten met macro's per portie, voor afvallen en spieropbouw.">
+<meta name="theme-color" content="#F6F1E7">
+<link rel="canonical" href="https://coachpaul.nl/recepten.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap">
+
+<style>
+/* Recepten in de kalme editorial stijl: crème papier, serif met italic accenten,
+   zachte kleurvlakken per recept (ontworpen om zonder foto af te ogen),
+   dunne lijnen en gespatieerde labels. Eén licht thema. */
+:root{
+  --paper:#F6F1E7; --ink:#26211B; --ink2:#6E675C; --mute:#9A9185;
+  --line:#E2DACA; --card:#FCF9F2; --oak:#A87F4F;
+  --t1:#F0E6D0; --a1:#B3842F;
+  --t2:#E6EDEA; --a2:#75806A;
+  --t3:#EAEFF2; --a3:#5F84A0;
+  --t4:#F2E6DC; --a4:#B06A48;
+  --t5:#F4E4E0; --a5:#B5524E;
+  --t6:#EFEAE0; --a6:#8A8066;
+  --serif:"Instrument Serif",Georgia,"Times New Roman",serif;
+  --sans:"Archivo","Helvetica Neue",Arial,sans-serif;
+  --pad:clamp(20px,4.5vw,48px); --w:1240px;
+}
+@media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
+*,*::before,*::after{box-sizing:border-box}
+html{padding-block:env(safe-area-inset-top,0px) env(safe-area-inset-bottom,0px)}
+body{margin:0;background:var(--paper);color:var(--ink);
+  font:400 clamp(15.5px,.3vw + 14.5px,17px)/1.6 var(--sans);
+  -webkit-font-smoothing:antialiased;overflow-x:hidden}
+body::before{content:"";position:fixed;inset:0 0 auto;z-index:20;height:env(safe-area-inset-top,0px);background:var(--paper)}
+.wrap{max-width:var(--w);margin-inline:auto;
+  padding-left:max(var(--pad),env(safe-area-inset-left,0px));
+  padding-right:max(var(--pad),env(safe-area-inset-right,0px))}
+img{max-width:100%;display:block}
+h1,h2,h3{margin:0;text-wrap:balance;font-family:var(--serif);font-weight:400;letter-spacing:-.01em}
+h1 em,h2 em{font-style:italic;color:var(--oak)}
+p{margin:0}
+a{color:inherit}
+a:focus-visible,summary:focus-visible{outline:2px solid var(--ink);outline-offset:3px}
+.rule{border:0;border-top:1px solid var(--ink);margin:0;opacity:.85}
+.caps{font:600 .66rem/1.6 var(--sans);letter-spacing:.3em;text-transform:uppercase}
+
+header.mast .wrap{display:flex;align-items:center;gap:clamp(1rem,3vw,2.4rem);padding-block:1.15rem;flex-wrap:wrap}
+.logo{font:400 clamp(1.45rem,3vw,1.7rem)/1.1 var(--serif);text-decoration:none}
+.tld{color:var(--oak)}
+.mast nav{display:flex;align-items:center;gap:clamp(1rem,2.4vw,1.9rem);margin-left:auto}
+.mast nav a:not(.pill){font:600 .72rem/1 var(--sans);letter-spacing:.22em;text-transform:uppercase;
+  color:var(--ink);text-decoration:none;transition:color .2s ease}
+.mast nav a:not(.pill):hover{color:var(--oak)}
+.pill{display:inline-flex;align-items:center;gap:.6rem;border-radius:999px;
+  background:var(--ink);color:var(--paper);border:1px solid var(--ink);
+  font:600 .72rem/1 var(--sans);letter-spacing:.18em;text-transform:uppercase;
+  padding:.95em 1.65em;text-decoration:none;transition:background .25s ease,color .25s ease}
+.pill:hover{background:var(--oak);border-color:var(--oak);color:#fff}
+@media (max-width:759px){.mast nav a:not(.pill){display:none}}
+
+.hero{padding-block:clamp(3rem,7vw,5rem) clamp(2.2rem,4.5vw,3.2rem);text-align:center}
+.hero .caps{color:var(--oak)}
+.hero h1{font-size:clamp(2.5rem,6.4vw,4.6rem);line-height:1.04;max-width:17ch;margin:1rem auto 0}
+.hero p.sub{color:var(--ink2);font-size:clamp(1rem,1.5vw,1.15rem);max-width:54ch;margin:1.2rem auto 0}
+.filters{display:flex;gap:.55rem;flex-wrap:wrap;justify-content:center;margin-top:1.7rem}
+.fbtn{border:1px solid var(--ink);background:var(--card);color:var(--ink);cursor:pointer;
+  border-radius:999px;padding:.7em 1.25em;
+  font:600 .7rem/1 var(--sans);letter-spacing:.18em;text-transform:uppercase;
+  transition:background .2s ease,color .2s ease}
+.fbtn:hover{background:var(--ink);color:var(--paper)}
+.fbtn.on{background:var(--ink);color:var(--paper)}
+
+.statement{border-block:1px solid var(--ink);padding-block:clamp(1.5rem,3vw,2.3rem);text-align:center}
+.statement p{font:400 clamp(1.8rem,4.2vw,3rem)/1.2 var(--serif);max-width:24ch;margin-inline:auto}
+.statement em{font-style:italic;color:var(--oak)}
+
+.grid{padding-block:clamp(2.4rem,5vw,3.8rem);display:grid;gap:clamp(1.6rem,3.5vw,2.4rem)}
+@media (min-width:760px){.grid{grid-template-columns:repeat(2,1fr)}}
+@media (min-width:1100px){.grid{grid-template-columns:repeat(3,1fr)}}
+.recept{background:var(--card);border:1px solid var(--line);border-radius:20px;overflow:hidden;
+  display:grid;align-content:start;min-width:0}
+.r-top{background:var(--tint);padding:1.5rem 1.4rem 1.3rem;display:grid;gap:.6rem;position:relative}
+.r-num{font:italic 400 2.2rem/1 var(--serif);color:var(--acc)}
+.r-tag{position:absolute;top:1.2rem;right:1.2rem;display:inline-flex;align-items:center;gap:.5em;
+  font:600 .6rem/1 var(--sans);letter-spacing:.22em;text-transform:uppercase;color:var(--ink2)}
+.r-tag i{width:8px;height:8px;border-radius:50%;background:var(--acc)}
+.recept h2{font-size:clamp(1.4rem,2.4vw,1.75rem);line-height:1.12;max-width:16ch}
+.r-macros{display:flex;gap:1.4rem;flex-wrap:wrap;border-top:1px solid rgba(38,33,27,.15);padding-top:.8rem;margin-top:.3rem}
+.r-macros div{display:grid;gap:.05rem}
+.r-macros b{font:400 1.25rem/1.1 var(--serif);font-variant-numeric:tabular-nums}
+.r-macros span{font:600 .56rem/1.4 var(--sans);letter-spacing:.2em;text-transform:uppercase;color:var(--ink2)}
+.r-body{padding:1.2rem 1.4rem 1.4rem;display:grid;gap:.9rem}
+.r-body p{color:var(--ink2);font-size:.93rem;line-height:1.6}
+.r-sub{font:600 .62rem/1.6 var(--sans);letter-spacing:.26em;text-transform:uppercase;color:var(--mute)}
+.r-ing{list-style:none;margin:0;padding:0;display:grid;gap:.35rem;font-size:.92rem;color:var(--ink2)}
+.r-ing li{display:grid;grid-template-columns:14px 1fr;gap:.5rem}
+.r-ing li::before{content:"·";color:var(--acc);font-weight:700}
+.recept details{border-top:1px solid var(--line);margin-top:.3rem}
+.recept summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:.8rem;
+  padding:.95rem 0 .2rem;
+  font:600 .68rem/1 var(--sans);letter-spacing:.22em;text-transform:uppercase;color:var(--ink)}
+.recept summary::-webkit-details-marker{display:none}
+.recept summary::after{content:"+";margin-left:auto;font:400 1.25rem/1 var(--serif);color:var(--oak)}
+.recept details[open] summary::after{content:"−"}
+.r-steps{list-style:none;counter-reset:st;margin:.7rem 0 .3rem;padding:0;display:grid;gap:.55rem}
+.r-steps li{counter-increment:st;display:grid;grid-template-columns:26px 1fr;gap:.6rem;
+  font-size:.92rem;color:var(--ink2)}
+.r-steps li::before{content:"0" counter(st);font:italic 400 .95rem/1.5 var(--serif);color:var(--acc)}
+
+.tip{border-top:1px solid var(--ink);padding-block:clamp(2rem,4.5vw,3rem)}
+.tip .wrap{display:grid;gap:clamp(1.4rem,3vw,2.2rem);max-width:1060px;align-items:center}
+@media (min-width:780px){.tip .wrap{grid-template-columns:.85fr 1.15fr}}
+.tip .tip-copy{display:grid;gap:1rem}
+.tip h2{font-size:clamp(1.5rem,3vw,2.1rem)}
+.tip p{color:var(--ink2);max-width:62ch}
+
+.foot-cta{border-top:1px solid var(--ink);padding-block:clamp(2.2rem,5vw,3.4rem)}
+.foot-cta .wrap{display:flex;align-items:center;justify-content:space-between;gap:1.4rem;flex-wrap:wrap}
+.foot-cta p{font:400 clamp(1.5rem,3.2vw,2.2rem)/1.3 var(--serif);max-width:26ch}
+.foot-cta em{font-style:italic;color:var(--oak)}
+
+footer{border-top:1px solid var(--ink)}
+footer .wrap{display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap;padding-block:1.3rem}
+.foot-logo{font:400 1.4rem/1 var(--serif);text-decoration:none}
+footer small{font:600 .66rem/1.8 var(--sans);letter-spacing:.18em;text-transform:uppercase;color:var(--ink2)}
+footer small a{text-decoration:none}
+footer small a:hover{color:var(--oak)}
+
+@media (prefers-reduced-motion:reduce){.pill,.fbtn{transition:none}}
+.heromedia{padding-bottom:clamp(1.6rem,3.5vw,2.6rem)}
+.heromedia .wrap{display:grid;gap:clamp(.9rem,2vw,1.2rem)}
+@media (min-width:680px){.heromedia .wrap{grid-template-columns:1.35fr 1fr}}
+.heromedia figure{margin:0;border-radius:18px;overflow:hidden;background:var(--line)}
+.heromedia img{width:100%;height:100%;object-fit:cover;min-height:240px;max-height:400px}
+.tip figure{margin:0;border-radius:18px;overflow:hidden;background:var(--line)}
+.tip figure img{width:100%;height:100%;object-fit:cover;min-height:240px;max-height:380px}
+</style>
+</head>
+<body>
+
+<header class="mast">
+  <div class="wrap">
+    <a class="logo" href="./">coachpaul<span class="tld">.nl</span></a>
+    <nav aria-label="Hoofdmenu">
+      <a href="./">Home</a>
+      <a href="blog.html">Blog</a>
+      <a class="pill" href="./#start">Plan een intake</a>
+    </nav>
+  </div>
+</header>
+
+<hr class="rule">
+
+<main>
+  <header class="hero">
+    <div class="wrap">
+      <p class="caps">Recepten · macro's per portie</p>
+      <h1>Eiwitrijk eten, <em>zonder gedoe.</em></h1>
+      <p class="sub">Zes recepten die ik mijn klanten zelf meegeef: gewone supermarkt-ingrediënten, snel klaar en per portie de calorieën en eiwitten erbij.</p>
+      <div class="filters" role="group" aria-label="Filter op moment">
+        <button class="fbtn on" type="button" data-f="alles">Alles</button>
+        <button class="fbtn" type="button" data-f="ontbijt">Ontbijt</button>
+        <button class="fbtn" type="button" data-f="lunch">Lunch</button>
+        <button class="fbtn" type="button" data-f="diner">Diner</button>
+        <button class="fbtn" type="button" data-f="snack">Snack</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="heromedia">
+    <div class="wrap">
+      <figure><img src="img/blog/fruit.jpg" alt="" width="1600" height="1067" loading="lazy" decoding="async"></figure>
+      <figure><img src="img/blog/rijst.jpg" alt="" width="1200" height="1800" loading="lazy" decoding="async" style="object-position:50% 55%"></figure>
+    </div>
+  </div>
+
+  <div class="statement" aria-hidden="true">
+    <p>Eerst je eiwit, <em>dan de rest.</em></p>
+  </div>
+
+  <section class="wrap grid" id="grid" aria-label="Recepten">
+
+    <article class="recept" data-cat="ontbijt" style="--tint:var(--t1);--acc:var(--a1)">
+      <div class="r-top">
+        <span class="r-num">Nº 01</span>
+        <span class="r-tag"><i></i>Ontbijt</span>
+        <h2>Kwarkbowl met granola &amp; blauwe bessen</h2>
+        <div class="r-macros">
+          <div><b>5 min</b><span>Klaar in</span></div>
+          <div><b>±420</b><span>Kcal</span></div>
+          <div><b>32 g</b><span>Eiwit</span></div>
+        </div>
+      </div>
+      <div class="r-body">
+        <p>Het snelste eiwitrijke ontbijt dat er is: romig, zoet en je zit er uren vol van.</p>
+        <span class="r-sub">Ingrediënten · 1 portie</span>
+        <ul class="r-ing">
+          <li>300 g magere kwark</li>
+          <li>40 g granola</li>
+          <li>100 g blauwe bessen</li>
+          <li>1 el honing</li>
+          <li>Snuf kaneel</li>
+        </ul>
+        <details>
+          <summary>Bekijk bereiding</summary>
+          <ol class="r-steps">
+            <li>Schep de kwark in een kom en roer glad.</li>
+            <li>Verdeel de granola en blauwe bessen erover.</li>
+            <li>Werk af met honing en kaneel.</li>
+          </ol>
+        </details>
+      </div>
+    </article>
+
+    <article class="recept" data-cat="ontbijt" style="--tint:var(--t2);--acc:var(--a2)">
+      <div class="r-top">
+        <span class="r-num">Nº 02</span>
+        <span class="r-tag"><i></i>Ontbijt</span>
+        <h2>Overnight oats met appel &amp; kaneel</h2>
+        <div class="r-macros">
+          <div><b>10 min</b><span>+ nacht</span></div>
+          <div><b>±450</b><span>Kcal</span></div>
+          <div><b>28 g</b><span>Eiwit</span></div>
+        </div>
+      </div>
+      <div class="r-body">
+        <p>Avond ervoor maken, ochtend erna pakken. Ideaal voor drukke weken en vroege trainingen.</p>
+        <span class="r-sub">Ingrediënten · 1 portie</span>
+        <ul class="r-ing">
+          <li>60 g havermout</li>
+          <li>150 g magere yoghurt</li>
+          <li>100 ml melk</li>
+          <li>1 appel, in blokjes</li>
+          <li>1 tl kaneel · 1 el chiazaad</li>
+        </ul>
+        <details>
+          <summary>Bekijk bereiding</summary>
+          <ol class="r-steps">
+            <li>Roer havermout, yoghurt, melk en chiazaad door elkaar in een pot.</li>
+            <li>Voeg de helft van de appel en de kaneel toe.</li>
+            <li>Nacht in de koelkast; serveer met de rest van de appel.</li>
+          </ol>
+        </details>
+      </div>
+    </article>
+
+    <article class="recept" data-cat="lunch" style="--tint:var(--t3);--acc:var(--a3)">
+      <div class="r-top">
+        <span class="r-num">Nº 03</span>
+        <span class="r-tag"><i></i>Lunch</span>
+        <h2>Tonijnwraps met frisse yoghurtsaus</h2>
+        <div class="r-macros">
+          <div><b>10 min</b><span>Klaar in</span></div>
+          <div><b>±520</b><span>Kcal</span></div>
+          <div><b>38 g</b><span>Eiwit</span></div>
+        </div>
+      </div>
+      <div class="r-body">
+        <p>Lunch die je meeneemt naar werk of school, met veel eiwit en lekker veel crunch.</p>
+        <span class="r-sub">Ingrediënten · 1 portie</span>
+        <ul class="r-ing">
+          <li>2 volkoren wraps</li>
+          <li>1 blikje tonijn op water (145 g)</li>
+          <li>3 el magere yoghurt · tl mosterd</li>
+          <li>¼ komkommer · ½ rode ui</li>
+          <li>Handje sla · peper &amp; citroen</li>
+        </ul>
+        <details>
+          <summary>Bekijk bereiding</summary>
+          <ol class="r-steps">
+            <li>Meng tonijn met yoghurt, mosterd, citroen en peper.</li>
+            <li>Snijd komkommer en ui fijn.</li>
+            <li>Beleg de wraps met sla, tonijnsalade en groente; rol strak op.</li>
+          </ol>
+        </details>
+      </div>
+    </article>
+
+    <article class="recept" data-cat="diner" style="--tint:var(--t4);--acc:var(--a4)">
+      <div class="r-top">
+        <span class="r-num">Nº 04</span>
+        <span class="r-tag"><i></i>Diner</span>
+        <h2>Kip teriyaki mealprep-bowl</h2>
+        <div class="r-macros">
+          <div><b>25 min</b><span>Klaar in</span></div>
+          <div><b>±610</b><span>Kcal</span></div>
+          <div><b>45 g</b><span>Eiwit</span></div>
+        </div>
+      </div>
+      <div class="r-body">
+        <p>Dé mealprep-klassieker: maak er in één keer drie of vier en je week staat.</p>
+        <span class="r-sub">Ingrediënten · 1 portie</span>
+        <ul class="r-ing">
+          <li>180 g kipfilet, in blokjes</li>
+          <li>75 g rijst (ongekookt)</li>
+          <li>200 g broccoli</li>
+          <li>2 el teriyakisaus · tl sesamolie</li>
+          <li>Sesamzaad &amp; lente-ui</li>
+        </ul>
+        <details>
+          <summary>Bekijk bereiding</summary>
+          <ol class="r-steps">
+            <li>Kook de rijst en stoom de broccoli beetgaar.</li>
+            <li>Bak de kip goudbruin in sesamolie; blus af met teriyakisaus.</li>
+            <li>Bouw de bowl op en werk af met sesam en lente-ui.</li>
+          </ol>
+        </details>
+      </div>
+    </article>
+
+    <article class="recept" data-cat="diner" style="--tint:var(--t5);--acc:var(--a5)">
+      <div class="r-top">
+        <span class="r-num">Nº 05</span>
+        <span class="r-tag"><i></i>Diner</span>
+        <h2>Zalm uit de oven met zoete aardappel</h2>
+        <div class="r-macros">
+          <div><b>30 min</b><span>Klaar in</span></div>
+          <div><b>±580</b><span>Kcal</span></div>
+          <div><b>36 g</b><span>Eiwit</span></div>
+        </div>
+      </div>
+      <div class="r-body">
+        <p>Omega-3 voor je herstel, één bakplaat voor de afwas. Mijn vaste zondagsdiner.</p>
+        <span class="r-sub">Ingrediënten · 1 portie</span>
+        <ul class="r-ing">
+          <li>150 g zalmfilet</li>
+          <li>250 g zoete aardappel</li>
+          <li>200 g broccoli of sperziebonen</li>
+          <li>1 el olijfolie · citroen</li>
+          <li>Paprikapoeder, knoflook, peper</li>
+        </ul>
+        <details>
+          <summary>Bekijk bereiding</summary>
+          <ol class="r-steps">
+            <li>Oven op 200 °C; zoete aardappel in parten, 15 min voorbakken met olie en kruiden.</li>
+            <li>Schuif de groente en zalm erbij; nog 12–15 min.</li>
+            <li>Serveer met citroen en versgemalen peper.</li>
+          </ol>
+        </details>
+      </div>
+    </article>
+
+    <article class="recept" data-cat="snack" style="--tint:var(--t6);--acc:var(--a6)">
+      <div class="r-top">
+        <span class="r-num">Nº 06</span>
+        <span class="r-tag"><i></i>Snack</span>
+        <h2>Griekse yoghurt-pannenkoekjes</h2>
+        <div class="r-macros">
+          <div><b>15 min</b><span>Klaar in</span></div>
+          <div><b>±380</b><span>Kcal</span></div>
+          <div><b>27 g</b><span>Eiwit</span></div>
+        </div>
+      </div>
+      <div class="r-body">
+        <p>Zoete trek, maar wel je eiwit binnen. Ook goud als ontbijt in het weekend.</p>
+        <span class="r-sub">Ingrediënten · 1 portie</span>
+        <ul class="r-ing">
+          <li>150 g Griekse yoghurt 0%</li>
+          <li>1 ei · 1 banaan</li>
+          <li>50 g havermout</li>
+          <li>Tl bakpoeder · snuf kaneel</li>
+          <li>Rood fruit voor erbij</li>
+        </ul>
+        <details>
+          <summary>Bekijk bereiding</summary>
+          <ol class="r-steps">
+            <li>Mix yoghurt, ei, banaan, havermout en bakpoeder tot een glad beslag.</li>
+            <li>Bak kleine pannenkoekjes op middelhoog vuur, ±2 min per kant.</li>
+            <li>Serveer met rood fruit en een beetje kaneel.</li>
+          </ol>
+        </details>
+      </div>
+    </article>
+  </section>
+
+  <div class="tip">
+    <div class="wrap">
+      <figure><img src="img/blog/keukentafel.jpg" alt="" width="1200" height="1784" loading="lazy" decoding="async" style="object-position:50% 60%"></figure>
+      <div class="tip-copy">
+      <p class="caps" style="color:var(--oak)">Zo gebruik je deze recepten</p>
+      <h2>Eerst je eiwit, <em>dan de rest.</em></h2>
+      <p>Elk recept is gebouwd rond één eiwitbron van 25 tot 45 gram per portie. Wil je afvallen? Houd de porties aan zoals ze staan. Wil je aankomen of bouw je spier op? Maak de koolhydraten-kant groter (meer rijst, havermout of brood) en laat het eiwit staan. In je coachingstraject reken ik jouw exacte porties uit. Hoeveel eiwit jij nodig hebt? <a href="blog/hoeveel-eiwit-per-dag.html" style="color:var(--ink)">Dat lees je hier</a>.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="foot-cta">
+    <div class="wrap">
+      <p>Wil je een weekmenu dat <em>op jou</em> is uitgerekend?</p>
+      <a class="pill" href="./#start">Plan een gratis intake</a>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <a class="foot-logo" href="./">coachpaul<span class="tld">.nl</span></a>
+    <small>© 2026 · training · voeding · recovery</small>
+    <small><a href="./">Home</a> &nbsp;·&nbsp; <a href="blog.html">Blog</a> &nbsp;·&nbsp; <a href="recovery.html">Recovery</a> &nbsp;·&nbsp; <a href="https://www.instagram.com/klouwenspaul" rel="noopener">Instagram</a></small>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var btns = [].slice.call(document.querySelectorAll('.fbtn'));
+  var cards = [].slice.call(document.querySelectorAll('#grid .recept'));
+  btns.forEach(function(b){
+    b.addEventListener('click', function(){
+      btns.forEach(function(x){ x.classList.toggle('on', x === b); });
+      var f = b.dataset.f;
+      cards.forEach(function(c){
+        c.style.display = (f === 'alles' || c.dataset.cat === f) ? '' : 'none';
+      });
+    });
+  });
+})();
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "Eiwitrijke recepten van coachpaul",
+  "itemListElement": [
+    {"@type": "Recipe", "position": 1, "name": "Kwarkbowl met granola en blauwe bessen", "recipeCategory": "Ontbijt", "totalTime": "PT5M", "recipeYield": "1 portie", "nutrition": {"@type": "NutritionInformation", "calories": "420 kcal", "proteinContent": "32 g"}, "recipeIngredient": ["300 g magere kwark","40 g granola","100 g blauwe bessen","1 el honing","snuf kaneel"], "recipeInstructions": [{"@type": "HowToStep", "text": "Roer de kwark glad, verdeel granola en bessen erover en werk af met honing en kaneel."}], "author": {"@type": "Person", "name": "Paul Klouwens"}},
+    {"@type": "Recipe", "position": 2, "name": "Overnight oats met appel en kaneel", "recipeCategory": "Ontbijt", "totalTime": "PT10M", "recipeYield": "1 portie", "nutrition": {"@type": "NutritionInformation", "calories": "450 kcal", "proteinContent": "28 g"}, "recipeIngredient": ["60 g havermout","150 g magere yoghurt","100 ml melk","1 appel","1 tl kaneel","1 el chiazaad"], "recipeInstructions": [{"@type": "HowToStep", "text": "Meng alles, laat een nacht in de koelkast staan en serveer met verse appel."}], "author": {"@type": "Person", "name": "Paul Klouwens"}},
+    {"@type": "Recipe", "position": 3, "name": "Tonijnwraps met frisse yoghurtsaus", "recipeCategory": "Lunch", "totalTime": "PT10M", "recipeYield": "1 portie", "nutrition": {"@type": "NutritionInformation", "calories": "520 kcal", "proteinContent": "38 g"}, "recipeIngredient": ["2 volkoren wraps","145 g tonijn op water","3 el magere yoghurt","1 tl mosterd","komkommer","rode ui","sla"], "recipeInstructions": [{"@type": "HowToStep", "text": "Meng de tonijnsalade, beleg de wraps met sla en groente en rol strak op."}], "author": {"@type": "Person", "name": "Paul Klouwens"}},
+    {"@type": "Recipe", "position": 4, "name": "Kip teriyaki mealprep-bowl", "recipeCategory": "Diner", "totalTime": "PT25M", "recipeYield": "1 portie", "nutrition": {"@type": "NutritionInformation", "calories": "610 kcal", "proteinContent": "45 g"}, "recipeIngredient": ["180 g kipfilet","75 g rijst","200 g broccoli","2 el teriyakisaus","1 tl sesamolie","sesamzaad","lente-ui"], "recipeInstructions": [{"@type": "HowToStep", "text": "Kook rijst, stoom broccoli, bak de kip en blus af met teriyakisaus; bouw de bowl op."}], "author": {"@type": "Person", "name": "Paul Klouwens"}},
+    {"@type": "Recipe", "position": 5, "name": "Zalm uit de oven met zoete aardappel", "recipeCategory": "Diner", "totalTime": "PT30M", "recipeYield": "1 portie", "nutrition": {"@type": "NutritionInformation", "calories": "580 kcal", "proteinContent": "36 g"}, "recipeIngredient": ["150 g zalmfilet","250 g zoete aardappel","200 g broccoli","1 el olijfolie","citroen","paprikapoeder","knoflook"], "recipeInstructions": [{"@type": "HowToStep", "text": "Bak de zoete aardappel voor, voeg zalm en groente toe en bak 12 tot 15 minuten op 200 graden."}], "author": {"@type": "Person", "name": "Paul Klouwens"}},
+    {"@type": "Recipe", "position": 6, "name": "Griekse yoghurt-pannenkoekjes", "recipeCategory": "Snack", "totalTime": "PT15M", "recipeYield": "1 portie", "nutrition": {"@type": "NutritionInformation", "calories": "380 kcal", "proteinContent": "27 g"}, "recipeIngredient": ["150 g Griekse yoghurt 0%","1 ei","1 banaan","50 g havermout","1 tl bakpoeder","kaneel"], "recipeInstructions": [{"@type": "HowToStep", "text": "Mix het beslag en bak kleine pannenkoekjes, ongeveer twee minuten per kant."}], "author": {"@type": "Person", "name": "Paul Klouwens"}}
+  ]
+}
+</script>
+</body>
+</html>
