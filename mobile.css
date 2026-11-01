@@ -1,0 +1,35 @@
+/* Telefoon-verfijning voor alle pagina's: tikdoelen van minimaal 44px
+   en kleine labels die op een telefoon nog goed leesbaar zijn (~12px). */
+html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
+a,button{-webkit-tap-highlight-color:rgba(0,0,0,.06);touch-action:manipulation}
+
+@media (max-width:759px){
+  /* knoppen */
+  .pill{min-height:46px;font-size:.88rem}
+  .menu-btn{min-height:44px;min-width:64px;justify-content:center;font-size:.88rem}
+  .burger{min-width:44px;min-height:44px;place-content:center}
+  .fbtn{min-height:44px;font-size:.8rem}
+  .chip{min-height:44px;font-size:.78rem}
+  .cbtn{width:48px;height:48px}
+
+  /* tekstlinks: grotere klikzone zonder dat de opmaak verschuift */
+  .ghost,.ghostlink,.textlink{display:inline-flex;align-items:center;min-height:44px;font-size:.78rem}
+  .wordmark,.logo,.ln-brand,.foot-logo{display:inline-flex;align-items:center;min-height:44px}
+  .ln-anchors a{display:inline-flex;align-items:center;min-height:44px;font-size:.74rem}
+  footer li a,.foot-col a{display:inline-flex;align-items:center;min-height:40px;font-size:.88rem}
+  .menu a,.mobile-panel a{min-height:48px;align-items:center}
+  .skip{min-height:44px}
+
+  /* kleine labels leesbaar houden (de pagina's zelf zijn specifieker, vandaar !important) */
+  .eyebrow,.m-eyebrow,.caps,.meta,.f-meta,.lees,.cat,.r-tag,.r-sub,.cap,.lab,.tile-go,.badge,
+  .crumb span,.topbar span,.ameta span,.scard span,.r-macros span,.tile-in span,.pull span,
+  figcaption,caption,th,small,small a,summary,.bronnen h2{font-size:.75rem!important}
+  .vb{font-size:.66rem!important}
+  .bhead{font-size:.8rem!important}
+
+  /* footerlinks naast elkaar: hogere klikzone */
+  footer small a{display:inline-block;padding-block:.9rem}
+
+  /* 16px in invoervelden voorkomt automatisch inzoomen op iPhone */
+  input,select,textarea{font-size:16px}
+}

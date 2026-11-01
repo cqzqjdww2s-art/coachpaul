@@ -3,6 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; media-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests">
+<meta name="referrer" content="strict-origin-when-cross-origin">
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
 <title>Sauna, IJsbad, Infrarood &amp; Roodlicht, Recovery | coachpaul</title>
 <meta name="description" content="De voordelen van sauna, ijsbad, infraroodsauna en roodlichttherapie op een rij: temperaturen, sessieduur, frequentie, veiligheid en veelgestelde vragen. Recovery als vast onderdeel van 1:1 online coaching door coachpaul.">
@@ -13,9 +15,7 @@
 <meta property="og:image" content="img/sauna.jpg">
 <meta name="theme-color" content="#F6F1E7">
 <link rel="canonical" href="https://coachpaul.nl/recovery.html">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap">
+<link rel="stylesheet" href="fonts/fonts.css">
 <link rel="preload" as="image" href="img/sauna.jpg" fetchpriority="high">
 
 <style>
@@ -233,16 +233,11 @@ footer small a:hover{color:var(--oak)}
 }
 .pull img{width:min(180px,44vw);height:auto;margin:0 auto 1.3rem;border-radius:16px;display:block}
 </style>
+<link rel="stylesheet" href="mobile.css">
 </head>
 <body>
 <a class="skip" href="#main">Naar de inhoud</a>
 
-<div class="topbar">
-  <div class="wrap">
-    <span>Editie Nº 02 · Recovery</span>
-    <span class="tb-r">Warmte · Kou · Licht</span>
-  </div>
-</div>
 
 <nav class="localnav" aria-label="Recovery-navigatie">
   <div class="wrap">
@@ -578,7 +573,7 @@ footer small a:hover{color:var(--oak)}
   <div class="wrap">
     <a class="foot-logo" href="./">coachpaul<span class="tld">.nl</span></a>
     <small>© 2026 · training · voeding · recovery</small>
-    <small><a href="./">Home</a> &nbsp;·&nbsp; <a href="blog.html">Blog</a> &nbsp;·&nbsp; <a href="recepten.html">Recepten</a> &nbsp;·&nbsp; <a href="https://www.instagram.com/klouwenspaul" rel="noopener">Instagram</a></small>
+    <small><a href="./">Home</a> &nbsp;·&nbsp; <a href="blog.html">Blog</a> &nbsp;·&nbsp; <a href="recepten.html">Recepten</a> &nbsp;·&nbsp; <a href="https://www.instagram.com/klouwenspaul" rel="noopener noreferrer">Instagram</a></small>
   </div>
 </footer>
 
@@ -618,66 +613,6 @@ footer small a:hover{color:var(--oak)}
 }
 </script>
 
-<script>
-(function(){
-  document.documentElement.classList.add('js');
-  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-
-  /* onthullingen */
-  var els = [].slice.call(document.querySelectorAll('.reveal'));
-  var show = function(el){ el.classList.add('in'); };
-  if (reduce || !('IntersectionObserver' in window)) {
-    els.forEach(show);
-  } else {
-    var io = new IntersectionObserver(function(entries){
-      entries.forEach(function(e){
-        if (e.isIntersecting) { show(e.target); io.unobserve(e.target); }
-      });
-    }, { threshold: .1, rootMargin: '0px 0px -6% 0px' });
-    els.forEach(function(el){ io.observe(el); });
-  }
-
-  /* sectievideo's: laden en spelen zodra ze in beeld komen, pauzeren erbuiten */
-  var vids = [].slice.call(document.querySelectorAll('video.lazyvid'));
-  if (!reduce && 'IntersectionObserver' in window) {
-    var vio = new IntersectionObserver(function(entries){
-      entries.forEach(function(e){
-        var v = e.target;
-        if (e.isIntersecting) {
-          if (!v.src && v.dataset.src) { v.src = v.dataset.src; }
-          if (v.play) { v.play().catch(function(){}); }
-        } else if (v.pause) { v.pause(); }
-      });
-    }, { rootMargin: '200px 0px' });
-    vids.forEach(function(v){ vio.observe(v); });
-  }
-  if (reduce) {
-    document.querySelectorAll('video[autoplay]').forEach(function(v){
-      v.removeAttribute('autoplay'); v.pause();
-    });
-  }
-
-  /* productbalk: actieve sectie markeren */
-  var anchors = [].slice.call(document.querySelectorAll('.ln-anchors a[href^="#"]'));
-  var secs = anchors.map(function(a){ return document.querySelector(a.getAttribute('href')); });
-  var tick = false;
-  var spy = function(){
-    tick = false;
-    var mid = (window.innerHeight || 800) * .38, id = '';
-    secs.forEach(function(s){
-      if (!s) return;
-      var r = s.getBoundingClientRect();
-      if (r.top <= mid && r.bottom > mid) id = s.id;
-    });
-    anchors.forEach(function(a){
-      a.classList.toggle('active', a.getAttribute('href') === '#' + id);
-    });
-  };
-  var onS = function(){ if (!tick) { tick = true; window.requestAnimationFrame(spy); } };
-  window.addEventListener('scroll', onS, { passive: true });
-  window.addEventListener('resize', onS, { passive: true });
-  spy();
-})();
-</script>
+<script src="js/recovery.js"></script>
 </body>
 </html>

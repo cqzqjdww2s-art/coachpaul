@@ -3,6 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; media-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests">
+<meta name="referrer" content="strict-origin-when-cross-origin">
 <link rel="icon" type="image/svg+xml" href="../favicon.svg">
 <title>Afvallen zonder jojo-effect: zo doe je het | coachpaul</title>
 <meta name="description" content="Afvallen zonder jojo-effect? Kies een klein calorietekort van 300–500 kcal, eet voldoende eiwit en blijf krachttrainen. Zo verlies je vet, en houd je het eraf.">
@@ -12,9 +14,7 @@
 <meta property="og:description" content="Klein tekort, genoeg eiwit, krachttraining: zo verlies je vet en houd je het eraf.">
 <meta name="theme-color" content="#F7F4EE">
 <link rel="canonical" href="https://coachpaul.nl/blog/afvallen-zonder-jojo.html">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap">
+<link rel="stylesheet" href="../fonts/fonts.css">
 
 <style>
 /* Kalme editorial artikelstijl: crème papier, serif met italic accenten,
@@ -128,15 +128,10 @@ footer small a:hover{color:var(--oak)}
 .afb img{width:100%;max-height:480px;object-fit:cover;display:block}
 .afb figcaption{font:600 .58rem/1.7 var(--sans);letter-spacing:.26em;text-transform:uppercase;color:var(--mute);margin-top:.7rem}
 </style>
+<link rel="stylesheet" href="../mobile.css">
 </head>
 <body>
 
-<div class="crumb">
-  <div class="wrap">
-    <span>Blog · Afvallen</span>
-    <span class="tb-r">Kennis · Onderzoek · Praktijk</span>
-  </div>
-</div>
 
 <header class="mast">
   <div class="wrap mast-in">
@@ -214,8 +209,8 @@ footer small a:hover{color:var(--oak)}
       <div class="bronnen">
         <h2>Bronnen</h2>
         <ul>
-          <li><a href="https://www.fit.nl/cutten" rel="noopener">FIT.nl, Cutten: vet verliezen met behoud van spiermassa</a></li>
-          <li><a href="https://www.welingelichtekringen.nl/gezondheid/hoe-je-er-zeker-van-kunt-zijn-dat-je-vet-verliest-en-niet-je-spieren-als-je-lijnt" rel="noopener">Welingelichte Kringen, Vet verliezen, geen spieren</a></li>
+          <li><a href="https://www.fit.nl/cutten" rel="noopener noreferrer">FIT.nl, Cutten: vet verliezen met behoud van spiermassa</a></li>
+          <li><a href="https://www.welingelichtekringen.nl/gezondheid/hoe-je-er-zeker-van-kunt-zijn-dat-je-vet-verliest-en-niet-je-spieren-als-je-lijnt" rel="noopener noreferrer">Welingelichte Kringen, Vet verliezen, geen spieren</a></li>
         </ul>
       </div>
       <p class="disclaimer">Dit artikel is algemene informatie en geen persoonlijk voedings- of medisch advies. Vragen over jouw situatie? Plan een gratis intake.</p>
@@ -236,7 +231,7 @@ footer small a:hover{color:var(--oak)}
   <div class="wrap">
     <a class="foot-logo" href="../">coachpaul<span class="tld">.nl</span></a>
     <small>© 2026 · training · voeding · recovery</small>
-    <small><a href="../">Home</a> &nbsp;·&nbsp; <a href="../blog.html">Blog</a> &nbsp;·&nbsp; <a href="../recepten.html">Recepten</a> &nbsp;·&nbsp; <a href="https://www.instagram.com/klouwenspaul" rel="noopener">Instagram</a></small>
+    <small><a href="../">Home</a> &nbsp;·&nbsp; <a href="../blog.html">Blog</a> &nbsp;·&nbsp; <a href="../recepten.html">Recepten</a> &nbsp;·&nbsp; <a href="https://www.instagram.com/klouwenspaul" rel="noopener noreferrer">Instagram</a></small>
   </div>
 </footer>
 

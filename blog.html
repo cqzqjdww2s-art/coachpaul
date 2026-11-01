@@ -3,6 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; media-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests">
+<meta name="referrer" content="strict-origin-when-cross-origin">
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
 <title>Blog · kennis over training, voeding &amp; herstel | coachpaul</title>
 <meta name="description" content="De kennisbank van coachpaul: onderbouwde artikelen over afvallen, spieropbouw, voeding en herstel. Gebaseerd op onderzoek, vertaald naar de praktijk, nieuwe artikelen elke week.">
@@ -12,9 +14,7 @@
 <meta property="og:description" content="Onderbouwde artikelen over afvallen, spieropbouw, voeding en herstel.">
 <meta name="theme-color" content="#F5F0E4">
 <link rel="canonical" href="https://coachpaul.nl/blog.html">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap">
+<link rel="stylesheet" href="fonts/fonts.css">
 
 <style>
 /* Editorial content-hub op crème: vet script-logo, brede zoekbalk-pil en hamburger
@@ -160,6 +160,7 @@ footer small a:hover{color:var(--oak)}
   .item-img img,.f-img img,.pill,.burger i{transition:none}
 }
 </style>
+<link rel="stylesheet" href="mobile.css">
 </head>
 <body>
 
@@ -272,35 +273,11 @@ footer small a:hover{color:var(--oak)}
   <div class="wrap">
     <a class="foot-logo" href="./">coachpaul<span class="tld">.nl</span></a>
     <small>© 2026 · training · voeding · recovery</small>
-    <small><a href="./">Home</a> &nbsp;·&nbsp; <a href="recepten.html">Recepten</a> &nbsp;·&nbsp; <a href="recovery.html">Recovery</a> &nbsp;·&nbsp; <a href="https://www.instagram.com/klouwenspaul" rel="noopener">Instagram</a></small>
+    <small><a href="./">Home</a> &nbsp;·&nbsp; <a href="recepten.html">Recepten</a> &nbsp;·&nbsp; <a href="recovery.html">Recovery</a> &nbsp;·&nbsp; <a href="https://www.instagram.com/klouwenspaul" rel="noopener noreferrer">Instagram</a></small>
   </div>
 </footer>
 
-<script>
-(function(){
-  /* hamburger-menu */
-  var burger = document.getElementById('burger');
-  var menu = document.getElementById('menu');
-  if (burger && menu) {
-    burger.addEventListener('click', function(){
-      var open = menu.classList.toggle('open');
-      burger.setAttribute('aria-expanded', open ? 'true' : 'false');
-    });
-  }
-  /* zoekfilter */
-  var input = document.getElementById('zoek');
-  var cards = [].slice.call(document.querySelectorAll('#grid .feature, #shelf .item'));
-  if (input) {
-    input.addEventListener('input', function(){
-      var q = input.value.trim().toLowerCase();
-      cards.forEach(function(c){
-        var hay = (c.textContent + ' ' + (c.dataset.zoek || '')).toLowerCase();
-        c.style.display = !q || hay.indexOf(q) !== -1 ? '' : 'none';
-      });
-    });
-  }
-})();
-</script>
+<script src="js/blog.js"></script>
 
 <script type="application/ld+json">
 {
